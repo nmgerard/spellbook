@@ -5,26 +5,35 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Spellbook</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link href="https://fonts.googleapis.com/css?family=Fondamento" rel="stylesheet">
+
     <link rel="stylesheet" type="text/css" media="screen" href="index.css" />
 </head>
 
 <body>
    <center>
-       <font color = "Gold">
-    <h1>GROCERY LIST:</h1>       
+        <font color = "White">
+    <h1>GROCERY LIST:</h1> 
+        </font> 
+    <font color = "Gold">     
     <h1 id = 'heading1'>Spellbook</h1>
     <h1 id = 'heading2'>Magic wand</h1>
     <h1 id = 'heading3'>Potions</h1>
     <h1 id = 'newHeading'></h1>
+
+    <h1 id = 'radioHeading'></h1>
+
     <button>Change Text</button><br>
 </center>
     <form>
         <input type = "text" id = 'response' placeholder="Enter a new item..." autofocus>
         <button type = "submit" id = "b2" value = "Submit">Submit</button><br>
-
         <br>
 
         <label>SELECT A MAGICAL HERB:</label><br>
+
+        <font color = "Green">
         <input type="radio" name="herb" id = "b" value="Basil">Basil
         <input type="radio" name="herb" id = "c" value="Clove">Clove
         <input type="radio" name="herb" id = "r" value="Rosemary">Rosemary
@@ -32,8 +41,9 @@
         <input type="radio" name="herb" id = "f" value="Fern">Fern
         <input type="radio" name="herb" id = "a" value="Amaranth">Amaranth
         <input type="radio" name="herb" id = "w" value="Witch Hazel">Witch Hazel
-       
+        </font>
     </form>
+
      </font> 
     <script src="index.js"></script> 
 </body>

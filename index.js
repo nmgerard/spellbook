@@ -8,15 +8,15 @@ function changetxt() {
 
 const updateHeading = function(ev) {
     ev.preventDefault()
-     const item = document.getElementById('response').value
+    const item = document.getElementById('response').value
     // document.getElementById('newHeading').innerHTML += '<p>' + item + '</p>' 
 
     var node = document.createElement("p");
     var textNode = document.createTextNode(item)
     node.appendChild(textNode);
     document.getElementById('newHeading').appendChild(node)
-
     form.reset()
+   
 }
 
 const clickRadioBtn = function(ev){
@@ -27,7 +27,7 @@ const clickRadioBtn = function(ev){
     var node = document.createElement("p");
     var textNode = document.createTextNode(item2)
     node.appendChild(textNode);
-    document.getElementById('newHeading').appendChild(node)  
+    document.getElementById('radioHeading').appendChild(node)  
     form.reset()
 }
 
