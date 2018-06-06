@@ -12,8 +12,9 @@ const updateHeading = function(ev) {
     // const item = t.item.value
 
     const item = document.getElementById('response').value
-    const item2 = document.getElementById('herb').value
     document.getElementById('newHeading').innerHTML += '<p>' + item + '</p>' 
+   
+    const item2 = document.querySelector('input[name = "herb"]:checked').value
     document.getElementById('newHeading').innerHTML += '<p>' + item2 + '</p>'
 
     form.reset()
@@ -29,3 +30,4 @@ window.addEventListener('keyup', function(ev){
       updateHeading();
     }
 });
+
