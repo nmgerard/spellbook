@@ -12,7 +12,9 @@ const updateHeading = function(ev) {
     // const item = t.item.value
 
     const item = document.getElementById('response').value
+    const item2 = document.getElementById('herb').value
     document.getElementById('newHeading').innerHTML += '<p>' + item + '</p>' 
+    document.getElementById('newHeading').innerHTML += '<p>' + item2 + '</p>'
 
     form.reset()
     // var newH = document.getElementById('response').value
