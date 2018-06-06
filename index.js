@@ -8,9 +8,16 @@ function changetxt() {
 
 const updateHeading = function(ev) {
     ev.preventDefault()
-    var newH = document.getElementById('response').value
-    const h3 = document.getElementById('newHeading')
-    h3.innerHTML = newH
+   //  const t = ev.target
+    // const item = t.item.value
+
+    const item = document.getElementById('response').value
+    document.getElementById('newHeading').innerHTML += '<p>' + item + '</p>' 
+
+    form.reset()
+    // var newH = document.getElementById('response').value
+    // const h3 = document.getElementById('newHeading')
+    // h3.innerHTML = newH
 }
 
 button.addEventListener('click', changetxt)
@@ -20,9 +27,3 @@ window.addEventListener('keyup', function(ev){
       updateHeading();
     }
 });
-
-//const b2 = document.getElementById('submit') line2
-    // const h = document.querySelector('h1') line5
-      // h.textContent = '~Kapow~' line6
-// document.querySelector('form').addEventListener('submit', updateHeading) line17
-
