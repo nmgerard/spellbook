@@ -8,26 +8,26 @@ function changetxt() {
 
 const updateHeading = function(ev) {
     ev.preventDefault()
-   //  const t = ev.target
-    // const item = t.item.value
+     const item = document.getElementById('response').value
+    // document.getElementById('newHeading').innerHTML += '<p>' + item + '</p>' 
 
-    const item = document.getElementById('response').value
-    document.getElementById('newHeading').innerHTML += '<p>' + item + '</p>' 
+    var node = document.createElement("p");
+    var textNode = document.createTextNode(item)
+    node.appendChild(textNode);
+    document.getElementById('newHeading').appendChild(node)
+
     form.reset()
-
-    // const item2 = document.querySelector('input[name = "herb"]:checked').value
-    // document.getElementById('newHeading').innerHTML += '<p>' + item2 + '</p>'
-    // form.reset()
-
-    // var newH = document.getElementById('response').value
-    // const h3 = document.getElementById('newHeading')
-    // h3.innerHTML = newH
 }
 
 const clickRadioBtn = function(ev){
     ev.preventDefault()
     const item2 = document.querySelector('input[name = "herb"]:checked').value
-    document.getElementById('newHeading').innerHTML += '<p>' + item2 + '</p>'
+    // document.getElementById('newHeading').innerHTML += '<p>' + item2 + '</p>'
+
+    var node = document.createElement("p");
+    var textNode = document.createTextNode(item2)
+    node.appendChild(textNode);
+    document.getElementById('newHeading').appendChild(node)  
     form.reset()
 }
 
