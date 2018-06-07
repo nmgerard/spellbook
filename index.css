@@ -1,11 +1,16 @@
 body {
-background-image: url("magic wand.jpeg");
+background-image: url("parch.jpg");
 background-size: cover;
 background-repeat: no-repeat;
 background-attachment: fixed;
 font-family: 'Fondamento', cursive;
+font-size: large;
 }
 
 #radioHeading{
     color:green;
+}
+
+.herb {
+color:green;
 }

@@ -13,38 +13,40 @@
 
 <body>
    <center>
-        <font color = "White">
-    <h1>GROCERY LIST:</h1> 
+        <font color = "Black">
+    <h1>SPELLBOOK:</h1> 
         </font> 
-    <font color = "Gold">     
-    <h1 id = 'heading1'>Spellbook</h1>
+    <!-- <h1 id = 'heading1'>Spellbook</h1>
     <h1 id = 'heading2'>Magic wand</h1>
-    <h1 id = 'heading3'>Potions</h1>
-    <h1 id = 'newHeading'></h1>
+    <h1 id = 'heading3'>Potions</h1> -->
+    <!-- <h1 id = 'newHeading'></h1> -->
 
-    <h1 id = 'radioHeading'></h1>
+    <!-- <h1 id = 'radioHeading'></h1> -->
 
-    <button>Change Text</button><br>
-</center>
+    <!-- <button>Change Text</button><br> -->
+
     <form>
-        <input type = "text" id = 'response' placeholder="Enter a new item..." autofocus>
-        <button type = "submit" id = "b2" value = "Submit">Submit</button><br>
+            <label><b>FIRST, ENTER A MAGICAL SPELL:</b></label><br>
+        <input type = "text" id = 'response' placeholder="Enter a spell..." autofocus><br>
         <br>
+        <label><b>NOW, SELECT A MAGICAL HERB:</b></label><br>
 
-        <label>SELECT A MAGICAL HERB:</label><br>
-
-        <font color = "Green">
-        <input type="radio" name="herb" id = "b" value="Basil">Basil
-        <input type="radio" name="herb" id = "c" value="Clove">Clove
-        <input type="radio" name="herb" id = "r" value="Rosemary">Rosemary
-        <input type="radio" name="herb" id = "s" value="Sage">Sage<br>
-        <input type="radio" name="herb" id = "f" value="Fern">Fern
-        <input type="radio" name="herb" id = "a" value="Amaranth">Amaranth
-        <input type="radio" name="herb" id = "w" value="Witch Hazel">Witch Hazel
+        <font color = "Green"><b>
+        <input type="radio" name="herb" id = "b" value=" and Basil">Basil
+        <input type="radio" name="herb" id = "c" value=" and Clove">Clove
+        <input type="radio" name="herb" id = "r" value=" and Rosemary">Rosemary
+        <input type="radio" name="herb" id = "s" value=" and Sage">Sage<br>
+        <input type="radio" name="herb" id = "f" value=" and Fern">Fern
+        <input type="radio" name="herb" id = "a" value=" and Amaranth">Amaranth
+        <input type="radio" name="herb" id = "w" value=" and Witch Hazel">Witch Hazel
+    </b>
         </font>
+        <br>
+        <button type = "submit" id = "b2" value = "Submit">Submit</button><br>
+       
     </form>
-
-     </font> 
+    <h1 id = 'newHeading'></h1>
+</center>
     <script src="index.js"></script> 
 </body>
 </html>   
