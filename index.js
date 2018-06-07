@@ -13,28 +13,48 @@ const addEntry = function(ev){
 
     const spellName = document.getElementById('response').value
     const spellTxt = document.createTextNode(spellName)
-
+        
     const herb = document.querySelector('input[name = "herb"]:checked').value
     const herbTxt = document.createTextNode(herb)
 
     const item = document.createElement('p')
-     item.appendChild(spellTxt)
-     item.appendChild(herbTxt)
+    item.appendChild(spellTxt)
+    item.appendChild(herbTxt)
 
+     ///delete button
      const deleteBtn = document.createElement("button")
-     deleteBtn.innerHTML = "DELETE"
+     deleteBtn.innerHTML = "&#10005"
+     deleteBtn.classList.add('delete')
      item.appendChild(deleteBtn)
+     ///
+
+     ///fav button
+     const favBtn = document.createElement("button")
+     favBtn.innerHTML = "&#9829"
+     favBtn.classList.add('fav')
+     item.appendChild(favBtn)
+     ///
+
+     ///edit button
+     const editBtn = document.createElement("button")
+     editBtn.innerHTML = "&#9998"
+     editBtn.classList.add('edit')
+     item.appendChild(editBtn)
+     ///
 
      const list = document.getElementById('newHeading')
      list.appendChild(item)
-     spellArray.push(item.innerHTML)
+     spellArray.push(item.textContent)
 
+     ///delete button functionality
     deleteBtn.addEventListener('click', function(ev){
        // item.parentNode.removeChild(item)
         list.removeChild(item) 
-        const index = spellArray.indexOf(item.innerHTML)
+        const index = spellArray.indexOf(item.textContent)
         spellArray.splice(index,1)
     });
+    ///
+
      form.reset()
 }
 

@@ -14,3 +14,12 @@ font-size: large;
 .herb {
 color:green;
 }
+
+button.delete{
+    background-color: #b91119be;
+    color: white; 
+}
+
+button.fav{
+    color: #b91119be;
+}
