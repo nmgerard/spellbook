@@ -1,6 +1,8 @@
 const button = document.querySelector('button')
 const form = document.querySelector('form')
 const spellArray = [];
+// const deleteBtn = document.createElement("button")
+// deleteBtn.innerHTML = "Delete Spell"
 
 // function changetxt() {
 //     const h2 = document.getElementById('heading2')
@@ -20,11 +22,24 @@ const addEntry = function(ev){
     const item = document.createElement('p')
      item.appendChild(spellTxt)
      item.appendChild(herbTxt)
+
+     const deleteBtn = document.createElement("button")
+     deleteBtn.innerHTML = "Delete Spell"
+
+     item.appendChild(deleteBtn)
      const list = document.getElementById('newHeading')
      list.appendChild(item)
+
+
      spellArray.push(item.innerHTML)
      form.reset()
 }
+
+const deleteEntry = function(ev){
+}
+
+//try to figure out how to just change the color of the herb using span
+//but first add a delete button to each entry
 
 // const updateHeading = function(ev) {
 //     ev.preventDefault()
@@ -71,3 +86,4 @@ window.addEventListener('keyup', function(ev){
       addEntry();
     }
 });
+deleteBtn.addEventListener('click', deleteEntry)
