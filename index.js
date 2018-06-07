@@ -22,7 +22,7 @@ const addEntry = function(ev){
      item.appendChild(herbTxt)
      const list = document.getElementById('newHeading')
      list.appendChild(item)
-
+     spellArray.push(item.innerHTML)
      form.reset()
 }
 
