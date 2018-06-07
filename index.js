@@ -24,18 +24,19 @@ const addEntry = function(ev){
      item.appendChild(herbTxt)
 
      const deleteBtn = document.createElement("button")
-     deleteBtn.innerHTML = "Delete Spell"
-
+     deleteBtn.innerHTML = "DELETE"
      item.appendChild(deleteBtn)
+
      const list = document.getElementById('newHeading')
      list.appendChild(item)
-
-
      spellArray.push(item.innerHTML)
-     form.reset()
-}
 
-const deleteEntry = function(ev){
+    deleteBtn.addEventListener('click', function(ev){
+       // item.parentNode.removeChild(item)
+        list.removeChild(item) 
+        spellArray.splice(item.tabIndex-1,1)
+    });
+     form.reset()
 }
 
 //try to figure out how to just change the color of the herb using span
@@ -86,4 +87,3 @@ window.addEventListener('keyup', function(ev){
       addEntry();
     }
 });
-deleteBtn.addEventListener('click', deleteEntry)
