@@ -1,8 +1,6 @@
 const button = document.querySelector('button')
 const form = document.querySelector('form')
 const spellArray = [];
-// const deleteBtn = document.createElement("button")
-// deleteBtn.innerHTML = "Delete Spell"
 
 // function changetxt() {
 //     const h2 = document.getElementById('heading2')
@@ -34,13 +32,21 @@ const addEntry = function(ev){
     deleteBtn.addEventListener('click', function(ev){
        // item.parentNode.removeChild(item)
         list.removeChild(item) 
-        spellArray.splice(item.tabIndex-1,1)
+        const index = spellArray.indexOf(item.innerHTML)
+        spellArray.splice(index,1)
     });
      form.reset()
 }
 
+window.addEventListener('click', addEntry)
+window.addEventListener('click', addEntry)
+window.addEventListener('keyup', function(ev){
+    if(ev.keyCode === 13){  
+      addEntry();
+    }
+});
+
 //try to figure out how to just change the color of the herb using span
-//but first add a delete button to each entry
 
 // const updateHeading = function(ev) {
 //     ev.preventDefault()
@@ -79,11 +85,3 @@ const addEntry = function(ev){
 //       updateHeading();
 //     }
 // });
-
-window.addEventListener('click', addEntry)
-window.addEventListener('click', addEntry)
-window.addEventListener('keyup', function(ev){
-    if(ev.keyCode === 13){  
-      addEntry();
-    }
-});
