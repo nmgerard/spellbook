@@ -13,7 +13,7 @@ const addEntry = function(ev){
 
     const spellName = document.getElementById('response').value
     const spellTxt = document.createTextNode(spellName)
-        
+
     const herb = document.querySelector('input[name = "herb"]:checked').value
     const herbTxt = document.createTextNode(herb)
 
