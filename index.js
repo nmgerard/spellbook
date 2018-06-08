@@ -43,6 +43,7 @@ const addEntry = function(ev){
      ///
 
      const list = document.getElementById('newHeading')
+   
      list.appendChild(item)
      spellArray.push(item.textContent)
 
@@ -52,6 +53,13 @@ const addEntry = function(ev){
         list.removeChild(item) 
         const index = spellArray.indexOf(item.textContent)
         spellArray.splice(index,1)
+    });
+    ///
+
+    ///edit button functionality
+    editBtn.addEventListener('click', function(ev){
+        
+        document.getElementById("inside").contentEditable = true;
     });
     ///
 
